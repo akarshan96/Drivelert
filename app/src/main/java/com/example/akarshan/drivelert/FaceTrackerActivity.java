@@ -1,18 +1,3 @@
-/*
- * Copyright (C) The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.example.akarshan.drivelert;
 
 import android.Manifest;
@@ -204,11 +189,7 @@ public final class FaceTrackerActivity extends AppCompatActivity {
             requestCameraPermission();
         }
     }
-    /**
-     * Handles the requesting of the camera permission.  This includes
-     * showing a "Snackbar" message of why the permission is needed then
-     * sending the request.
-     */
+    
     private void requestCameraPermission() {
         Log.w(TAG, "Camera permission is not granted. Requesting permission");
 
@@ -237,11 +218,6 @@ public final class FaceTrackerActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * Creates and starts the camera.  Note that this uses a higher resolution in comparison
-     * to other detection examples to enable the barcode detector to detect small barcodes
-     * at long distances.
-     */
     private void createCameraSource() {
 
         Context context = getApplicationContext();
@@ -274,9 +250,7 @@ public final class FaceTrackerActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * Restarts the camera.
-     */
+    
     @Override
     protected void onResume() {
         super.onResume();
@@ -284,19 +258,12 @@ public final class FaceTrackerActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * Stops the camera.
-     */
     @Override
     protected void onPause() {
         super.onPause();
         mPreview.stop();
     }
-
-    /**
-     * Releases the resources associated with the camera source, the associated detector, and the
-     * rest of the processing pipeline.
-     */
+   
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -306,22 +273,6 @@ public final class FaceTrackerActivity extends AppCompatActivity {
         stop_playing();
     }
 
-    /**
-     * Callback for the result from requesting permissions. This method
-     * is invoked for every call on {@link #requestPermissions(String[], int)}.
-     * <p>
-     * <strong>Note:</strong> It is possible that the permissions request interaction
-     * with the user is interrupted. In this case you will receive empty permissions
-     * and results arrays which should be treated as a cancellation.
-     * </p>
-     *
-     * @param requestCode  The request code passed in {@link #requestPermissions(String[], int)}.
-     * @param permissions  The requested permissions. Never null.
-     * @param grantResults The grant results for the corresponding permissions
-     *                     which is either {@link PackageManager#PERMISSION_GRANTED}
-     *                     or {@link PackageManager#PERMISSION_DENIED}. Never null.
-     * @see #requestPermissions(String[], int)
-     */
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         if (requestCode != RC_HANDLE_CAMERA_PERM) {
@@ -353,15 +304,6 @@ public final class FaceTrackerActivity extends AppCompatActivity {
                 .show();
     }
 
-    //==============================================================================================
-    // Camera Source Preview
-    //==============================================================================================
-
-    /**
-     * Starts or restarts the camera source, if it exists.  If the camera source doesn't exist yet
-     * (e.g., because onResume was called before the camera source was created), this will be called
-     * again when the camera source is created.
-     */
     private void startCameraSource() {
 
         // check that the device has play services available.
