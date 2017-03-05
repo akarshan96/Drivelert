@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topLayout"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <com.example.akarshan.drivelert.ui.camera.CameraSourcePreview
+      android:id="@+id/preview"
+      android:layout_width="300dp"
+      android:layout_height="400dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+
+    <com.example.akarshan.drivelert.ui.camera.GraphicOverlay
+        android:id="@+id/faceOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+  </com.example.akarshan.drivelert.ui.camera.CameraSourcePreview>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:background="#00BCD4"
+            android:gravity="center|center_horizontal"
+            android:layout_weight="0"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/end"
+                android:id="@+id/button"
+                android:background="#E0E0E0"
+                android:layout_marginRight="5dp" />
+
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New ToggleButton"
+                android:id="@+id/toggleButton"
+                android:textSize="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Status: "
+                android:textStyle="bold"
+                android:id="@+id/textView3"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView4" />
+
+        </TableRow>
+    </RelativeLayout>
+
+</LinearLayout>
+
+

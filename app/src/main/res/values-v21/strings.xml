@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="end">END</string>
+    <string name="status">STATUS:</string>
+    <string name="touch_the_below_icon_and_start_to_begin_the_monitoring_process">Double tap below icon to begin the Monitoring Process:</string>
+    <string name="alarm_will_invoke_after">Alarm will invoke after:</string>
+    <string name="high">High</string>
+    <string name="medium_recommended">Medium(Recommended)</string>
+    <string name="low">Low</string>
+    <string name="time_senstivity">Time Senstivity</string>
+</resources>

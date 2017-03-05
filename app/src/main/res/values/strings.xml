@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Drivelert</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission. The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="end">END</string>
+    <string name="status">STATUS:</string>
+    <string name="alarm_will_invoke_after">Alarm will invoke after:</string>
+    <string name="high">High</string>
+    <string name="medium_recommended">Medium(Recommended)</string>
+    <string name="low">Low</string>
+    <string name="time_senstivity">Time Senstivity</string>
+</resources>
