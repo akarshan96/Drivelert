@@ -4,8 +4,8 @@
     android:versionCode="2">
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="22" />
+        android:minSdkVersion="21"
+        android:targetSdkVersion="34" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -14,7 +14,7 @@
     <application
         android:allowBackup="true"
         android:largeHeap="true"
-        android:name="android.support.multidex.MultiDexApplication"
+        android:name="androidx.multidex.MultiDexApplication"
         android:icon="@drawable/l"
         android:label="@string/app_name"
         android:supportsRtl="true"
